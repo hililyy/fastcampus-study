@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A77C6D826D4BF2600424565 /* StopWatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A77C6D726D4BF2600424565 /* StopWatchTableViewCell.swift */; };
 		2A85332626C3FCBC00A2AE35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A85332526C3FCBC00A2AE35 /* AppDelegate.swift */; };
 		2A85332826C3FCBC00A2AE35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A85332726C3FCBC00A2AE35 /* SceneDelegate.swift */; };
 		2A85332A26C3FCBC00A2AE35 /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A85332926C3FCBC00A2AE35 /* ClockViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A77C6D726D4BF2600424565 /* StopWatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchTableViewCell.swift; sourceTree = "<group>"; };
 		2A85332226C3FCBC00A2AE35 /* Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A85332526C3FCBC00A2AE35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A85332726C3FCBC00A2AE35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				2A85332726C3FCBC00A2AE35 /* SceneDelegate.swift */,
 				2A85332926C3FCBC00A2AE35 /* ClockViewController.swift */,
 				2A85332B26C3FCBC00A2AE35 /* Main.storyboard */,
+				2A77C6D726D4BF2600424565 /* StopWatchTableViewCell.swift */,
 				2A85333F26C66B2500A2AE35 /* GlobalViewController.swift */,
 				2A85333B26C661A100A2AE35 /* StopWatchViewController.swift */,
 				2A85332E26C3FCBD00A2AE35 /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A85332A26C3FCBC00A2AE35 /* ClockViewController.swift in Sources */,
+				2A77C6D826D4BF2600424565 /* StopWatchTableViewCell.swift in Sources */,
 				2A85332626C3FCBC00A2AE35 /* AppDelegate.swift in Sources */,
 				2A85332826C3FCBC00A2AE35 /* SceneDelegate.swift in Sources */,
 				2A85334026C66B2500A2AE35 /* GlobalViewController.swift in Sources */,
