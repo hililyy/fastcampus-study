@@ -9,6 +9,7 @@ import UIKit
 
 class GlobalClockViewController: UIViewController {
 
+    @IBOutlet var cityListView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 

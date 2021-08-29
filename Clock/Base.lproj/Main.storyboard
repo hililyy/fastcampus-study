@@ -893,19 +893,22 @@
                         <barButtonItem key="leftBarButtonItem" title="편집" id="Ght-hd-1CR"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="JBY-vX-aq0">
                             <connections>
-                                <segue destination="XuN-AC-anE" kind="modal" id="oTW-g5-CP7"/>
+                                <segue destination="XuN-AC-anE" kind="modal" identifier="cirtDetail" id="oTW-g5-CP7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cityListView" destination="fY5-zV-ONo" id="PC9-B0-dju"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAY-0K-e67" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4788" y="-1373.1634182908547"/>
+            <point key="canvasLocation" x="4740" y="-1373"/>
         </scene>
-        <!--View Controller-->
+        <!--Global Clock City List Table View Controller-->
         <scene sceneID="oVY-lC-LCb">
             <objects>
-                <viewController id="XuN-AC-anE" sceneMemberID="viewController">
+                <viewController id="XuN-AC-anE" customClass="GlobalClockCityListTableViewController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IHc-Hu-cKM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -932,12 +935,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="p54-Xy-FKq">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cityCell" id="p54-Xy-FKq">
                                         <rect key="frame" x="0.0" y="24.5" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p54-Xy-FKq" id="g0A-TY-67Q">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="가보로네, 보츠와나" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2CJ-DO-Zwo">
+                                                    <rect key="frame" x="16" y="11" width="151" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -946,10 +958,15 @@
                         <viewLayoutGuide key="safeArea" id="wdc-vO-6kn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="btnCancel" destination="Y4o-dy-RIw" id="XFC-5N-bTb"/>
+                        <outlet property="cityListView" destination="TsY-7S-Kta" id="TxU-Km-O7b"/>
+                        <outlet property="search" destination="BEg-a4-VCZ" id="M3A-sd-Oby"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nOQ-bR-jPV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5653.6000000000004" y="-1373.1634182908547"/>
+            <point key="canvasLocation" x="5572" y="-1373.1634182908547"/>
         </scene>
         <!--세계 시계-->
         <scene sceneID="Kjf-Sd-mc2">
