@@ -852,11 +852,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="selectCityCell" rowHeight="90" id="Fna-Ye-LXX" customClass="selectCityCell" customModule="Clock" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="375" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="selectCityCell" rowHeight="93" id="Fna-Ye-LXX" customClass="selectCityCell" customModule="Clock" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="375" height="93"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fna-Ye-LXX" id="vgf-4A-2yw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="93"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxe-m7-Fy4">
@@ -903,7 +903,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="y0d-ha-g0i">
-                        <barButtonItem key="leftBarButtonItem" title="편집" id="Ght-hd-1CR"/>
+                        <barButtonItem key="leftBarButtonItem" title="편집" id="Ght-hd-1CR">
+                            <connections>
+                                <action selector="editButton:" destination="OQ4-rf-8LQ" id="bPe-gi-XzK"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="JBY-vX-aq0">
                             <connections>
                                 <segue destination="XuN-AC-anE" kind="modal" identifier="cirtDetail" id="oTW-g5-CP7"/>
@@ -916,7 +920,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAY-0K-e67" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4740" y="-1373"/>
+            <point key="canvasLocation" x="4740" y="-1373.1634182908547"/>
         </scene>
         <!--Global Clock City List Table View Controller-->
         <scene sceneID="oVY-lC-LCb">
