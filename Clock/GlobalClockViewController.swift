@@ -7,16 +7,27 @@
 
 import UIKit
 
-class GlobalClockViewController: UIViewController {
+class GlobalClockViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var cityListView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        cityListView.delegate = self
+        cityListView.dataSource = self
         // Do any additional setup after loading the view.
     }
     
-
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "selectCityCell", for: IndexPath) as! selectCityCell
+        
+        cell.lblCityClock = ""
+        return cell
+    }
     /*
     // MARK: - Navigation
 

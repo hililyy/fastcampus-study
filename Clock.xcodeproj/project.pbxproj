@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A51FCD126DE4255007A1D4E /* cityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A51FCD026DE4255007A1D4E /* cityCell.swift */; };
+		2A51FCD326E0BDBA007A1D4E /* selectCityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A51FCD226E0BDBA007A1D4E /* selectCityCell.swift */; };
 		2A77C6D826D4BF2600424565 /* StopWatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A77C6D726D4BF2600424565 /* StopWatchTableViewCell.swift */; };
 		2A77C6DA26D76E6600424565 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A77C6D926D76E6600424565 /* TimerViewController.swift */; };
 		2A85332626C3FCBC00A2AE35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A85332526C3FCBC00A2AE35 /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		2A51FCD026DE4255007A1D4E /* cityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cityCell.swift; sourceTree = "<group>"; };
+		2A51FCD226E0BDBA007A1D4E /* selectCityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectCityCell.swift; sourceTree = "<group>"; };
 		2A77C6D726D4BF2600424565 /* StopWatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchTableViewCell.swift; sourceTree = "<group>"; };
 		2A77C6D926D76E6600424565 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		2A85332226C3FCBC00A2AE35 /* Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +80,7 @@
 				2ACF0E0C26DB735D009466E7 /* GlobalClockCityListTableViewController.swift */,
 				2A51FCD026DE4255007A1D4E /* cityCell.swift */,
 				2ACF0E0626D7DA52009466E7 /* GlobalClockViewController.swift */,
+				2A51FCD226E0BDBA007A1D4E /* selectCityCell.swift */,
 				2ACF0E0826D7DA78009466E7 /* GlobalClockTableViewCell.swift */,
 				2A85333B26C661A100A2AE35 /* StopWatchViewController.swift */,
 				2A77C6D726D4BF2600424565 /* StopWatchTableViewCell.swift */,
@@ -166,6 +169,7 @@
 				2A85332626C3FCBC00A2AE35 /* AppDelegate.swift in Sources */,
 				2ACF0E0D26DB735D009466E7 /* GlobalClockCityListTableViewController.swift in Sources */,
 				2A77C6DA26D76E6600424565 /* TimerViewController.swift in Sources */,
+				2A51FCD326E0BDBA007A1D4E /* selectCityCell.swift in Sources */,
 				2A85332826C3FCBC00A2AE35 /* SceneDelegate.swift in Sources */,
 				2A85333C26C661A100A2AE35 /* StopWatchViewController.swift in Sources */,
 			);
