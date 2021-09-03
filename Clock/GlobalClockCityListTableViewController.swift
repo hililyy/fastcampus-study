@@ -9,11 +9,11 @@ import UIKit
 
 class GlobalClockCityListTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet var cityListView: UITableView!
     @IBOutlet var search: UISearchBar!
     @IBOutlet var btnCancel: UIButton!
-    @IBOutlet var cityListView: UITableView!
     
-    let searchController =  UISearchController(search)
+//    let searchController =  UISearchController(search)
     
     // search bar 네이게이션 바에 title, search bar, button 넣은건지 확인
     
@@ -69,13 +69,17 @@ class GlobalClockCityListTableViewController: UIViewController, UITableViewDeleg
     //필수?
     //섹션 타이틀 명
     func tableView(_ tableView:UITableView, titleForHeaderInSection section: Int) -> String? {
-        print(sections[section])
+//        print(sections[section])
         return sections[section]
     }
     
     // 3. 항목을 선택했을때
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("click \(indexPath.row)")
+//        print("click \(indexPath.row) , \(indexPath.item) , \(indexPath.section)")
+        //[indexPath.section][indexPath.row]
+        
+        
+        
     }
     
     @IBAction func cancelClick(_ sender: UIButton) {

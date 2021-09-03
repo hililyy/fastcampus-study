@@ -8,7 +8,8 @@
 import UIKit
 
 class GlobalClockViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var city : [String] = ["서울","가보로네"]
+    var mycity : [String] = ["서울","가보로네"]
+    
     
     @IBOutlet var cityListView: UITableView!
     override func viewDidLoad() {
@@ -31,7 +32,7 @@ class GlobalClockViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return city.count
+        return mycity.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -52,7 +53,7 @@ class GlobalClockViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
-            city.remove(at: (indexPath as NSIndexPath).row)
+            mycity.remove(at: (indexPath as NSIndexPath).row)
             cityListView.deleteRows(at: [indexPath], with: .fade)
         }
         else if editingStyle == . insert{
