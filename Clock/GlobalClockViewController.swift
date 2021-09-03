@@ -13,10 +13,19 @@ class GlobalClockViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet var cityListView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 네비게이션 왼쪽 버튼 클릭 시 전체 편집이 되어야 하는데 그게 안됨 ㅠㅠ..
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
+//        self.cityListView.allowsSelectionDuringEditing = true
         cityListView.delegate = self
         cityListView.dataSource = self
-        // Do any additional setup after loading the view.
+        
+//        self.navigationItem.leftBarButtonItem.title = "편집";
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        cityListView.reloadData()
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -41,24 +50,20 @@ class GlobalClockViewController: UIViewController, UITableViewDelegate, UITableV
         return 93;
     }
     
-    
-    @IBAction func editButton(_ sender: UIBarButtonItem) {
-//        if self.cityListView.isEditing {
-//            self.editButton.s
-//        }
-//        cityListView.edit(with: sender, to: UITableView)
-//
-        
-        
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            city.remove(at: (indexPath as NSIndexPath).row)
+            cityListView.deleteRows(at: [indexPath], with: .fade)
+        }
+        else if editingStyle == . insert{
+            
+        }
     }
     
-    func edit(with button: UIBarButtonItem, to tableView: UITableView) {
-            if tableView.isEditing {
-                button.title = "Edit"
-                tableView.setEditing(false, animated: true)
-            } else {
-                button.title = "Done"
-                tableView.setEditing(true, animated: true)
-            }
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "삭제"
     }
+    
+   
+    
 }

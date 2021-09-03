@@ -13,6 +13,8 @@ class GlobalClockCityListTableViewController: UIViewController, UITableViewDeleg
     @IBOutlet var btnCancel: UIButton!
     @IBOutlet var cityListView: UITableView!
     
+    let searchController =  UISearchController(search)
+    
     // search bar 네이게이션 바에 title, search bar, button 넣은건지 확인
     
     let cityItem : [[String]] = [
@@ -71,13 +73,9 @@ class GlobalClockCityListTableViewController: UIViewController, UITableViewDeleg
         return sections[section]
     }
     
-
-  
-    
     // 3. 항목을 선택했을때
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("click \(indexPath.row)")
-        
     }
     
     @IBAction func cancelClick(_ sender: UIButton) {
