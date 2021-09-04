@@ -5,6 +5,7 @@
 //  Created by 강조은 on 2021/08/13.
 //
 
+// 안된것 : 랩 스크롤 버그, 랩 add 방향 반대로, 랩 시간 이전시간과 비교해서 나타나게
 import UIKit
 
 class StopWatchViewController: UIViewController {

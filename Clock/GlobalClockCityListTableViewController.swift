@@ -7,6 +7,8 @@
 
 import UIKit
 
+let DidDismissPostCommentViewController: Notification.Name = Notification.Name("DidDismissPostCommentViewController")
+
 class GlobalClockCityListTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var cityListView: UITableView!
@@ -15,7 +17,7 @@ class GlobalClockCityListTableViewController: UIViewController, UITableViewDeleg
     
 //    let searchController =  UISearchController(search)
     
-    // search bar 네이게이션 바에 title, search bar, button 넣은건지 확인
+    // 네비게이션 바에 title, search bar, button 넣은건지??? 우선 난 그렇게 안함 ㅠㅠ
     
     let cityItem : [[String]] = [
         ["가보로네, 보츠와나","가자, 팔레스타인"],
@@ -36,6 +38,7 @@ class GlobalClockCityListTableViewController: UIViewController, UITableViewDeleg
     
 
     let sections: [String] = ["ㄱ","ㄴ","ㄷ","ㄹ","ㅁ","ㅂ","ㅅ","ㅇ","ㅈ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ"]
+    
     
 
     override func viewDidLoad() {
@@ -77,13 +80,20 @@ class GlobalClockCityListTableViewController: UIViewController, UITableViewDeleg
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        print("click \(indexPath.row) , \(indexPath.item) , \(indexPath.section)")
         //[indexPath.section][indexPath.row]
-        
-        
+        mycity.append(cityItem[indexPath.section][indexPath.row])
+        //궁금한게 왜 popViewController로는 이전화면으로 돌아가는게 안될까ㅠㅠ -> modal 이라서??
+//        _ = navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
+// notification center : 중재자 역할
+// 여기서는 tableview의 modal reload를 위해 사용하였다.
+        NotificationCenter.default.post(name: DidDismissPostCommentViewController, object: nil, userInfo: nil)
+
         
     }
     
     @IBAction func cancelClick(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+        
     }
 
 }
