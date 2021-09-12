@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class TimerViewController: UIViewController{
    
     
     var interval = 0.1
@@ -15,40 +15,47 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet var pickerView: UIDatePicker!
     @IBOutlet var btnCancel: UIButton!
     @IBOutlet var btnStart: UIButton!
-    @IBOutlet var singleTableView: UITableView!
+    @IBOutlet var btnSound: UIButton!
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        singleTableView.delegate = self
-        singleTableView.dataSource = self
+   
+        btnSound.layer.cornerRadius = 10
+        btnSound.backgroundColor = UIColor.gray
+        btnSound.setTitleColor(.white, for: .normal)
         
-        pickerView.addTarget(self, action: #selector(changeDatePicker), for: .valueChanged)
+
+        
+        
+//        pickerView.addTarget(self, action: #selector(changeDatePicker), for: .valueChanged)
     }
     
     @IBAction func changeDatePicker(_ sender: UIDatePicker) {
        // let datePickerView = sender
-        let dateformatter = DateFormatter()
-        
-        dateformatter.dateStyle = .none
-        dateformatter.timeStyle = .none
+//        let dateformatter = DateFormatter()
+//
+//        dateformatter.dateStyle = .none
+//        dateformatter.timeStyle = .none
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 1
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "timerSingleCell", for: indexPath) as! timerSingleCell
+//        cell.lbltext.text = "타이머 종료 시"
+//        cell.selectSound.text = "전파탐지기"
+//        return cell
+//    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "timerSingleCell", for: indexPath) as! timerSingleCell
-        cell.lbltext.text = "타이머 종료 시"
-        cell.selectSound.text = "전파탐지기"
-        return cell
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-   
-    
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return 1
+//    }
+//
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        self.performSegue(withIdentifier: "soundSegue", sender: self)
+//    }
 
 }
