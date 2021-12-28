@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A98A0B2276F8C4A00B31486 /* gg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A98A0B1276F8C4A00B31486 /* gg.m */; };
 		2A98CB7E27220042002A7493 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A98CB7D27220042002A7493 /* AppDelegate.swift */; };
 		2A98CB8027220042002A7493 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A98CB7F27220042002A7493 /* SceneDelegate.swift */; };
 		2A98CB8227220042002A7493 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A98CB8127220042002A7493 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A98A0B0276F8C4900B31486 /* AutoLayoutExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AutoLayoutExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		2A98A0B1276F8C4A00B31486 /* gg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gg.m; sourceTree = "<group>"; };
 		2A98CB7A27220042002A7493 /* AutoLayoutExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayoutExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A98CB7D27220042002A7493 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A98CB7F27220042002A7493 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,9 +63,11 @@
 				2A98CB7F27220042002A7493 /* SceneDelegate.swift */,
 				2A98CB8127220042002A7493 /* ViewController.swift */,
 				2A98CB8327220042002A7493 /* Main.storyboard */,
+				2A98A0B1276F8C4A00B31486 /* gg.m */,
 				2A98CB8627220042002A7493 /* Assets.xcassets */,
 				2A98CB8827220042002A7493 /* LaunchScreen.storyboard */,
 				2A98CB8B27220042002A7493 /* Info.plist */,
+				2A98A0B0276F8C4900B31486 /* AutoLayoutExample-Bridging-Header.h */,
 			);
 			path = AutoLayoutExample;
 			sourceTree = "<group>";
@@ -98,6 +103,7 @@
 				TargetAttributes = {
 					2A98CB7927220042002A7493 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1310;
 					};
 				};
 			};
@@ -138,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A98CB8227220042002A7493 /* ViewController.swift in Sources */,
+				2A98A0B2276F8C4A00B31486 /* gg.m in Sources */,
 				2A98CB7E27220042002A7493 /* AppDelegate.swift in Sources */,
 				2A98CB8027220042002A7493 /* SceneDelegate.swift in Sources */,
 			);
@@ -286,6 +293,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 68P2WV4DR3;
 				INFOPLIST_FILE = AutoLayoutExample/Info.plist;
@@ -295,6 +303,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.AutoLayoutExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AutoLayoutExample/AutoLayoutExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,6 +315,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 68P2WV4DR3;
 				INFOPLIST_FILE = AutoLayoutExample/Info.plist;
@@ -314,6 +325,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.AutoLayoutExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AutoLayoutExample/AutoLayoutExample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
